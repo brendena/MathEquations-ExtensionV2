@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "init": "echo \"test\"",
-    "build_component": "echo \"build_component\"" 
+    "init": "bash init.sh",
+    "build_component": "bash ./buildDep.sh" 
   },
   "repository": {
     "type": "git",
