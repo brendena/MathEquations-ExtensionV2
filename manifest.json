@@ -1,0 +1,23 @@
+{
+  "name": "Math Equations",
+  "version": "0.0.1",
+  "description": "latest covid data of UK",
+  "manifest_version": 3,
+  "author": "Brenden Adamczak",
+
+  "permissions": ["activeTab", 
+                  "clipboardWrite",
+                  "scripting"
+                ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open-close-extension": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      },
+      "description": "Opens the extension or closes it"
+    }
+  }
+}
