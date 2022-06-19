@@ -1,0 +1,20 @@
+{
+  "name": "mathequations-extensionv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "echo \"test\"",
+    "build_component": "echo \"build_component\"" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendena/MathEquations-ExtensionV2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brendena/MathEquations-ExtensionV2/issues"
+  },
+  "homepage": "https://github.com/brendena/MathEquations-ExtensionV2#readme"
+}
