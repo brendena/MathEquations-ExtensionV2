@@ -1,11 +1,11 @@
 {
   "name": "mathequations-extensionv2",
-  "version": "1.0.0",
+  "version": "5.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "init": "bash init.sh",
-    "build_component": "bash ./buildDep.sh" 
+    "build_component": "bash ./buildDep.sh"
   },
   "repository": {
     "type": "git",

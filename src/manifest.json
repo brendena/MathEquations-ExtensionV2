@@ -1,6 +1,6 @@
 {
-  "name": "Math Equations",
-  "version": "0.0.1",
+  "name": "Math Equations Anywhere",
+  "version": "5.0.1",
   "description": "Add equations to your math page",
   "manifest_version": 3,
   "author": "Brenden Adamczak",
@@ -19,5 +19,19 @@
       },
       "description": "Opens the extension or closes it"
     }
+  },
+  "icons": { 
+    "16": "./img/16x16.png",
+    "32": "./img/32x32.png",
+    "48": "./img/48x48.png",
+    "96": "./img/96x96.png",
+    "128": "./img/128x128.png",
+    "512": "./img/512x512.png" 
+  },
+
+  "action":{
+    "default_icon": {              
+    },
+    "default_title": "Math Equations"
   }
 }
