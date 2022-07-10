@@ -33,9 +33,9 @@ const addScriptsToPage = (tabId)=>{
                     console.log(response);
                 });
             }
-            else if(document.getElementsByTagName("math-equation-component").length == 0)
+            else if(document.getElementsByTagName("math-equation-extension").length == 0)
             {
-                document.body.append(document.createElement("math-equation-component"));
+                document.body.append(document.createElement("math-equation-extension"));
             }
             else{
                 //probably tell the ui to close
