@@ -1,13 +1,14 @@
 {
   "name": "Math Equations Anywhere",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Add equations to your math page",
   "manifest_version": 3,
   "author": "Brenden Adamczak",
 
   "permissions": ["activeTab", 
                   "clipboardWrite",
-                  "scripting"
+                  "scripting",
+                  "storage"
                 ],
   "background": {
     "service_worker": "background.js"

@@ -1,21 +1,5 @@
 var browser = browser || chrome;
 
-/*
-const addScriptsToPage = (tabId)=>{
-    chrome.scripting.executeScript({
-        target: { tabId: tabId },
-        files:["MathEquationComponent.js","script.js"]
-    },()=>{
-        
-        console.log("-------------")
-        browser.scripting.getRegisteredContentScripts({}).then((scripts)=>{
-            console.log("scripts")
-            console.log(scripts)
-        })
-
-    });
-}
-*/
 
 /*
 Purpose
@@ -45,6 +29,7 @@ const addScriptsToPage = (tabId)=>{
     });
 }
 
+//communication from webpage back to the background script
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         console.log("------------ghot this")
@@ -61,10 +46,12 @@ chrome.runtime.onMessage.addListener(
     }
 );
 
+//actions when click the browser extension ui
 browser.action.onClicked.addListener((tab) => {
     addScriptsToPage(tab.id)
 });
 
+//actions when you run keyboard shortcut
 browser.commands.onCommand.addListener((command) => {
     console.log(command)
     browser.tabs.query({active: true, lastFocusedWindow: true}, function(tabs) {
@@ -75,5 +62,23 @@ browser.commands.onCommand.addListener((command) => {
     });
 });
 
+const defaultSettings = {
+    "orientation": "bottom"
+}
 
-console.log("started!!!")
+console.log(Object.keys(defaultSettings))
+
+//set the default values for the storage
+const listKeys = Object.keys(defaultSettings);
+chrome.storage.sync.get(listKeys, function(result) {
+    listKeys.forEach((key)=>{
+        if(result[key] === undefined)
+        {
+            chrome.storage.sync.set({[key]: defaultSettings[key]}, function() { console.log("asdded") });
+        }
+        else{
+            console.log(key + " - exists")
+        }
+    });
+
+});
